@@ -30,9 +30,9 @@ public class TopTreesActivity extends AppCompatActivity {
     public void getTree(View listItem){
         Tree tree = (Tree) listItem.getTag();
         Intent i = new Intent(this, TreeActivity.class);
+        i.putExtra("ranking", tree.getRanking().toString());
         i.putExtra("commonName", tree.getCommonName());
         i.putExtra("latinName", tree.getLatinName());
-        i.putExtra("ranking", tree.getRanking().toString());
         startActivity(i);
     }
 }

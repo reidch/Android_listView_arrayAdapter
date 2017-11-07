@@ -7,9 +7,9 @@ import android.widget.TextView;
 
 public class TreeActivity extends AppCompatActivity {
 
+    TextView rankingTV;
     TextView commonTV;
     TextView latinTV;
-    TextView rankingTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,16 +18,16 @@ public class TreeActivity extends AppCompatActivity {
 
         Intent i = getIntent();
         Bundle extras = i.getExtras();
+        String ranking = extras.getString("ranking");
         String commonName = extras.getString("commonName");
         String latinName = extras.getString("latinName");
-        String ranking = extras.getString("ranking");
 
+        rankingTV = (TextView) findViewById(R.id.ranking);
         commonTV = (TextView) findViewById(R.id.commonName);
         latinTV = (TextView) findViewById(R.id.latinName);
-        rankingTV = (TextView) findViewById(R.id.ranking);
 
+        rankingTV.setText(ranking);
         commonTV.setText(commonName);
         latinTV.setText(latinName);
-        rankingTV.setText(ranking);
     }
 }
