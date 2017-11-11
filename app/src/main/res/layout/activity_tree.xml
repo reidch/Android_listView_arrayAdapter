@@ -55,20 +55,17 @@
         android:layout_marginLeft="8dp"
         tools:layout_editor_absoluteX="289dp" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="365dp"
-        android:layout_height="424dp"
-        android:layout_marginBottom="8dp"
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="-121dp"
-        android:layout_marginTop="97dp"
-        android:adjustViewBounds="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.319"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="206dp"
+        android:onClick="deleteTree"
+        android:text="DELETE"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/leaves_arduaine" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
